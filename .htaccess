@@ -1,6 +1,6 @@
 RewriteEngine On
 
-RewriteRule ^gif-loader/index.php/(.*) index.php?img_src=$1 [L]
+RewriteRule ^index.php/(.*) index.php?img_src=$1 [L]
 
 <FilesMatch "index.php">
 #Header set Cache-Control "max-age=86400, public"
