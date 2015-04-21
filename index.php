@@ -14,7 +14,7 @@ class Gif_Loader {
         $headers = get_headers( $url );
 
         if ( false !== strpos( $headers[0], '200' ) ) {
-            self::$image_location = $check_location;
+            self::$image_location = $url;
             return true;
         } else {
             return false;
