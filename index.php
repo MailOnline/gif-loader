@@ -12,6 +12,11 @@ class Gif_Loader {
     private static function check_input() {
 
         $check_location = filter_var( 'http://' . $_GET['img_src'], FILTER_VALIDATE_URL );
+        $check_secure_location = filter_var( 'https://' . $_GET['img_src'], FILTER_VALIDATE_URL );
+        
+        if ( $check_location == false ) && ( ! empty( $check_secure_location ) ) {
+            $check_location = $check_secure_location;
+        }
 
         $headers = get_headers( $check_location );
 
