@@ -38,7 +38,7 @@ class Gif_Loader {
     }
 
     private static function build_image() {
-        /* Atddtempt to open */
+        /* Attempt to open */
         $im = @imagecreatefromgif( self::$image_location );
 
         if ( ! $im ){
