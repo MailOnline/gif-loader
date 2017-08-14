@@ -59,6 +59,8 @@ class Gif_Loader {
 
     private static function send_headers( $error = true ) {
 
+	header('Cache-Control: max-age=900');
+
         if ( $error ) {
             header('HTTP/1.0 400 Bad Request', true, 400);
             exit;
